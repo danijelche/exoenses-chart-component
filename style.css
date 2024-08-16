@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+body {
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+main {
+    max-width: 450px;
+    width: 100%;
+    padding: 0 10px;
+ 
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Soft-red);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--Very-pale-orange);
+    margin-bottom: 15px;
+    width: 100%;
+   
+}
+
+.header h3 {
+    font-size: 1.5em; 
+}
+
+img {
+    width: 56px;
+}
+
+.section-center {
+    background-color: var(--Very-pale-orange);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+	
+    
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid gray;
+}
+.price-section p {
+	color: var(--Medium-brown);
+	font-size: .8rem;
+	font-weight: 400;
+}
+.price-section h1,h2 {
+	color: var(--Dark-brown);
+}
+.last-month h2 {
+	text-align: right;
+	font-size: 1rem;
+}
+
+.columns {
+    display: flex;
+	min-height: 20vh;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.chart-element {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	cursor: pointer;
+	font-size: 14px;
+	color: var(--Medium-brown);
+}
+.column-chart {
+	width: 36px;
+	border-radius: 5px;
+	background-color: var(--Soft-red);
+}
+
+.column-chart:hover {
+	background-color: hsla(10, 79%, 65%, .3)
+}
+
+
+
+.column-price {
+	position: absolute;
+    bottom: 100%; 
+    display: none;
+    margin-bottom: 5px;
+	background-color: var(--Dark-brown);
+	border-radius: 5px;
+	color: var(--Very-pale-orange);
+	padding: 5px;
+}
+@media(max-width: 320px) {
+	.columns {
+		height: 20vh;
+	
+	}
+	.column-chart {
+	width: 26px;
+	}
+	.column-price {
+		font-size: 12px;
+		padding: 2px;
+	}
+}
+
